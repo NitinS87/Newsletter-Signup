@@ -23,7 +23,7 @@ app.get("/", function(req, res) {
 //Setting up MailChimp
 mailchimp.setConfig({
   //*****************************ENTER YOUR API KEY HERE******************************
-  apiKey: "870988248f341a6617e24956a923eba2-us14",
+  apiKey: "Enter your api key here",
   //*****************************ENTER YOUR API KEY PREFIX HERE i.e.THE SERVER******************************
   server: "us14"
 });
@@ -34,7 +34,7 @@ app.post("/", function(req, res) {
   const secondName = req.body.secondName;
   const email = req.body.email;
   //*****************************ENTER YOU LIST ID HERE******************************
-  const listId = "1a05cde251";
+  const listId = "rrrr";
   //Creating an object with the users data
   const subscribingUser = {
     firstName: firstName,
@@ -64,5 +64,4 @@ app.post("/", function(req, res) {
   // So the catch statement is executed when there is an error so if anything goes wrong the code in the catch code is executed. In the catch block we're sending back the failure page. This means if anything goes wrong send the faliure page
   run().catch(e => res.sendFile(__dirname + "/failure.html"));
 });
-//API ID-870988248f341a6617e24956a923eba2-us14
-//list_id-1a05cde251
+
